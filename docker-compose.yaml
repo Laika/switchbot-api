@@ -16,7 +16,8 @@ services:
     cap_add:
       - NET_ADMIN
     environment:
-      - MAC_ADDR=FF:FF:FF:FF:FF:FF
+      - MAC_ADDR=CC:0C:40:6F:1F:19
+      - PERIOD=10
     volumes:
       - sensor-data:/data
 

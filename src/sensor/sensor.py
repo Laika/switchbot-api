@@ -6,6 +6,7 @@ import schedule
 from bluepy.btle import DefaultDelegate, Scanner
 
 macaddr = os.getenv("MAC_ADDR", "FF:FF:FF:FF:FF:FF").lower()
+period = int(os.getenv("PERIOD", "10"))
 service_uuid = "cba20d00-224d-11e6-9fb8-0002a5d5c51b"
 char_uuid = "cba20002-224d-11e6-9fb8-0002a5d5c51b"
 
@@ -48,7 +49,7 @@ def scan():
     scanner.scan(5.0)
 
 
-schedule.every(10).seconds.do(scan)
+schedule.every(period).seconds.do(scan)
 
 while True:
     schedule.run_pending()
