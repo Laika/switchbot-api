@@ -13,3 +13,7 @@ services:
 ```bash
 docker compose up -d
 ```
+
+## Demo
+
+[![demo](https://asciinema.org/a/Uo6FmVP2etW5AvrxxJMdmTkWO.svg)](https://asciinema.org/a/Uo6FmVP2etW5AvrxxJMdmTkWO?autoplay=1)
