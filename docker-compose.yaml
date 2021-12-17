@@ -1,0 +1,25 @@
+---
+version: '3'
+services:
+  api:
+    build: ./src/api/
+    restart: always
+    ports:
+      - 8000:8000
+    volumes:
+      - sensor-data:/data
+
+  sensor:
+    build: ./src/sensor/
+    restart: always
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+    environment:
+      - MAC_ADDR=FF:FF:FF:FF:FF:FF
+    volumes:
+      - sensor-data:/data
+
+volumes:
+  sensor-data:
+    driver: local
