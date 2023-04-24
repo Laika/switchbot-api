@@ -1,4 +1,4 @@
-# SwitchBot thermometer API
+# SwitchBot API
 
 ## Configure
 Change `MAC_ADDR` to your thermometer's MAC address in docker-compose.yaml
