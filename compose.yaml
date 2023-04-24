@@ -16,8 +16,9 @@ services:
     cap_add:
       - NET_ADMIN
     environment:
-      - MAC_ADDR=CC:0C:40:6F:1F:19
-      - PERIOD=10
+      - THERMOMETER_MAC_ADDR=CC:0C:40:6F:1F:19
+      - HUMAN_DETECTOR_MAC_ADDR=EF:DA:4A:BE:E0:D1
+      - PERIOD=1
     volumes:
       - sensor-data:/data
 
