@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "switchbot-api"
+version = "0.1.0"
+description = ""
+authors = ["Laika <laika@albina.cc>"]
+readme = "README.md"
+packages = [{ include = "switchbot_api" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+bluepy = "^1.3.0"
+fastapi = "^0.95.1"
+schedule = "^1.2.0"
+uvicorn = "^0.21.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
