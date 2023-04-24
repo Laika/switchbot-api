@@ -15,7 +15,7 @@ char_uuid = "cba20002-224d-11e6-9fb8-0002a5d5c51b"
 
 class ThermometerScanDelegate(DefaultDelegate):
     def __init__(self, macaddr):
-        DefaultDelegate.__init__(self)
+        super().__init__()
         self.sensorValue = None
         self.macaddr = macaddr
 
@@ -46,7 +46,7 @@ class ThermometerScanDelegate(DefaultDelegate):
 
 class HumanDetectorScanDelegate(DefaultDelegate):
     def __init__(self, macaddr):
-        DefaultDelegate.__init__(self)
+        super().__init__()
         self.sensor_value = None
         self.macaddr = macaddr
 

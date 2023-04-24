@@ -2,6 +2,7 @@ import json
 import logging
 import os
 
+from bluepy.btle import DefaultDelegate, Scanner
 from fastapi import FastAPI
 
 from sensor import HumanDetectorScanDelegate, ThermometerScanDelegate
@@ -40,8 +41,8 @@ async def thermometer():
     return sensor
 
 
-@app.get("/api/human-detection")
-async def human_detection():
+@app.get("/api/human-detector")
+async def human_detector():
     try:
         scanner = Scanner().withDelegate(HumanDetectorScanDelegate(human_detector_macaddr))
         scanner.scan(timeout)
