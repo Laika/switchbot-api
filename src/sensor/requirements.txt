@@ -1,4 +1,0 @@
-bluepy
-fastapi
-schedule
-uvicorn

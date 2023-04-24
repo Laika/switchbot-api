@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["Laika <laika@albina.cc>"]
 readme = "README.md"
-packages = [{ include = "switchbot_api" }]
 
 [tool.poetry.dependencies]
 python = "^3.10"
